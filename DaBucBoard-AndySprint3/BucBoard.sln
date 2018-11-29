@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BucBoard", "BucBoard\BucBoard.csproj", "{CCF17318-E0A3-467A-A5E9-71524418366D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BucBoard.Tests", "BucBoard.Tests\BucBoard.Tests.csproj", "{F1965E52-70B7-498C-91C0-0C3C65E8CAE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCF17318-E0A3-467A-A5E9-71524418366D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF17318-E0A3-467A-A5E9-71524418366D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF17318-E0A3-467A-A5E9-71524418366D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF17318-E0A3-467A-A5E9-71524418366D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1965E52-70B7-498C-91C0-0C3C65E8CAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1965E52-70B7-498C-91C0-0C3C65E8CAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1965E52-70B7-498C-91C0-0C3C65E8CAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1965E52-70B7-498C-91C0-0C3C65E8CAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9751E971-61B0-4FFC-921A-75694E51EABD}
+	EndGlobalSection
+EndGlobal

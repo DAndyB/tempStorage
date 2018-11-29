@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AdvisorSideKickMVC.Models.PreferenceInfoViewModel>
+
+@{
+    ViewBag.Title = "PreferenceList";
+}
+
+<h2>Preference List</h2>
+
+<p>
+    @Html.ActionLink("Add Department Preference", "AddDepartment")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SchoolName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdvisorCount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SchoolName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvisorCount)
+        </td>
+    </tr>
+}
+
+</table>

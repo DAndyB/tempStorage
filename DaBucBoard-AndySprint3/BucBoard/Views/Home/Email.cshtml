@@ -1,0 +1,50 @@
+﻿
+@{
+
+    ViewBag.Title = "Bucmail";
+    Layout = "~/Views/Shared/Popup.cshtml";
+    List<string> SubOptions = new List<string>();
+    SubOptions.Add("Need an appointment");
+    SubOptions.Add("Need help with assignment");
+    SubOptions.Add("Missed you in office");
+    SubOptions.Add("Other");
+    
+
+}
+<style>
+    textarea 
+    {
+        color: #000000;
+    }
+</style>
+<script>
+    function CloseWindow()
+    {
+        window.close()
+    }
+</script>
+<div class="text-center">
+    <h2>@ViewBag.Message</h2>
+
+    <label for="email"> ETSU E-mail: </label>
+    <br />
+    <input type="email" class="align-content-center" id="email" style="text-align: center; color: #000000" required/>
+    <br />
+    <br />
+    <select id="SubjectOps" name="SubjectOptions" class="text-center" style="color: black" required>
+        <option> Select Subject </option>
+        <option value=""> @SubOptions[0] </option>
+        <option value=""> @SubOptions[1] </option>
+        <option value=""> @SubOptions[2] </option>
+        <option value=""> @SubOptions[3] </option>
+    </select>
+    <br />
+    <br />
+    <label for="textarea"> Please type a brief message (200 characters max) </label>
+    <br />
+    <textarea id="EmailBody" maxlength="200" cols="50" rows="5" required></textarea>
+    <br />
+    <button type="submit" class="btn btn-default" onclick="CloseWindow()">Submit!</button>
+</div>
+
+

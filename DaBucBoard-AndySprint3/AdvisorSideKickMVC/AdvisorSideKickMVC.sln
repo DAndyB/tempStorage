@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvisorSideKickMVC", "AdvisorSideKickMVC\AdvisorSideKickMVC.csproj", "{5D27AD49-805D-4725-A68D-BE3D71BBA3EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASTesting", "ASTesting\ASTesting.csproj", "{FBF99368-387E-4CFC-89F5-723FFF46E542}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D27AD49-805D-4725-A68D-BE3D71BBA3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D27AD49-805D-4725-A68D-BE3D71BBA3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D27AD49-805D-4725-A68D-BE3D71BBA3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D27AD49-805D-4725-A68D-BE3D71BBA3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF99368-387E-4CFC-89F5-723FFF46E542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF99368-387E-4CFC-89F5-723FFF46E542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF99368-387E-4CFC-89F5-723FFF46E542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF99368-387E-4CFC-89F5-723FFF46E542}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

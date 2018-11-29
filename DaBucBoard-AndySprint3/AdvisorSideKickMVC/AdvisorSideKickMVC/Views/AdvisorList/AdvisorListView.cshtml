@@ -1,0 +1,56 @@
+﻿@model IEnumerable<AdvisorSideKickMVC.Models.AdvisorListViewModel>
+
+@{
+    ViewBag.Title = "AdvisorListView";
+}
+
+<h2>Advisor List</h2>
+
+<p>
+    @Html.ActionLink("Add Advisor", "AddAdvisor")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <p>College Name</p>
+        </th>
+        <th>
+            <p>Department Name</p>
+        </th>
+        <th>
+            <p>Advisor</p>
+        </th>
+        <th>
+            <p>Email</p>
+        </th>
+        <th>
+            <p>Office Number</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dept.SchoolName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dept.DepartmentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvisorListEntry.FirstName)
+            @Html.DisplayFor(modelItem => item.AdvisorListEntry.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvisorListEntry.AdvisorEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvisorListEntry.OfficeNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Email", "Email")
+        </td>
+    </tr>
+    }
+
+</table>

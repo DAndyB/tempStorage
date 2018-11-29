@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Bucpointment";
+    Layout = "~/Views/Shared/Popup.cshtml";
+}
+
+<div class="text-center">
+    <img src="~/Images/ETSULogo.png" width="50" height="50" class="d-inline-block align-top" />
+    <h2> @ViewBag.Message</h2>
+    <br />
+    <br />
+    <label for="email"> ETSU E-mail: </label>
+    <br />
+    <input type="email" class="align-content-center" id="email" style="text-align: center" />
+    <br />
+    <label for="stuId"> Student ID: </label>
+    <br />
+    <input type="stuId" class="align-content-center" id="stuId" style="text-align: center" />
+    <br />
+    <hr />
+    <label for="time"> Select a time:</label>
+    <br />
+    
+    <select class="text-center" style="color: black">
+        <option> -- Chose a day and time -- </option>
+        <option disabled> Monday </option>
+        <option value="12:30PM-1:30PM"> 12:30 PM - 1:30 PM </option>
+        <option disabled> Tuesday </option>
+        <option value="2:30PM-3:30PM"> 2:30 PM - 3:30 PM </option>
+        <option disabled> Wednesday </option>
+        <option value="4:30PM-5:30PM"> 2:30 PM - 3:30 PM </option>
+        <option disabled> Thursday </option>
+        <option value="9:30PM-10:30PM"> 2:30 PM - 3:30 PM </option>
+    </select>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-default" onclick="CloseWindow()">Submit!</button>
+    <br />
+</div>
+<script>
+    function CloseWindow()
+    {
+        window.close()
+    }
+</script>
+
+

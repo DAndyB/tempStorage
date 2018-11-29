@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AdvisorSideKickMVC.Models.AddAdvisorViewModel> 
+
+@{
+    ViewBag.Title = "Add Advisor";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@using (Html.BeginForm("Index", "AdvisorList"))
+{
+    <form asp-controller="AdvisorList" asp-action="@Url.Action("AddAdvisorPreference")" method="post">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="AdvisorId" class="control-label col-md-2">Select a Advisor:</label>
+                <div class="col-md-10">
+                    <select name="AdvisorId" id="AdvisorId" class="form-control">
+                        @foreach (var advisor in Model)
+                        {
+                            <option value="@advisor.AdvisorId">@advisor.OfficeNumber, @advisor.FirstName, @advisor.LastName, @advisor.AdvisorEmail,</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="AddAdvisorPreference" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "AdvisorList")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

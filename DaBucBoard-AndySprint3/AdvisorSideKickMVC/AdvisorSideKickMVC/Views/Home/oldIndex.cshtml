@@ -1,0 +1,33 @@
+﻿@model List<AdvisorSideKickMVC.Models.PreferenceInfoViewModel>
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="/home/AddDepartment?email=@User.Identity.GetUserName()" class="btn btn-primary" role="button">Add More Academic Interest! <span class="glyphicon glyphicon-plus-sign"></span></a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DepartmentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DepartmentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DepartmentId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<AdvisorSideKickMVC.Models.AddPreferenceViewModel>
+
+@{
+    ViewBag.Title = "Add Departmental Preference";
+}
+
+<h2>Add Departmental Preference</h2>
+
+@using (Html.BeginForm("AddDepartment", "Profile"))
+{
+    <form asp-controller="Home" asp-action="@Url.Action("AddDepartmentPreference")" method="post">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <br /><br />
+                <label for="DepartmentId" class="control-label col-md-2">Select a Department:</label>
+                <div class="col-md-10">
+
+                    <select name="DepartmentId" id="DepartmentId" class="form-control">
+                        @foreach (var department in Model)
+                        {
+                            <option value="@department.DepartmentId">@department.SchoolName, @department.DepartmentName  </option>
+
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Add to Preferences" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </form>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
